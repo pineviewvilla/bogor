@@ -171,6 +171,14 @@
         </div>
 
         <!-- AREA FEED INSTAGRAM (live) - powered by SociableKit, terhubung ke @nuansahutanpinus -->
+        <!-- CSS di bawah membatasi tampilan hanya 3 postingan pertama, jaga-jaga jika opsi "Number of Posts" tidak tersedia di paket gratis SociableKit. -->
+        <style>
+            #ig-feed-embed .sk-ww-instagram-reels > div > div > div:nth-child(n+4),
+            #ig-feed-embed [class*="-item"]:nth-child(n+4),
+            #ig-feed-embed [class*="_item"]:nth-child(n+4) {
+                display: none !important;
+            }
+        </style>
         <div id="ig-feed-embed" class="mb-10">
             <div class="sk-ww-instagram-reels" data-embed-id="25707890"></div>
             <script src="https://widgets.sociablekit.com/instagram-reels/widget.js" defer></script>
